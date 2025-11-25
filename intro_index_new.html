@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE Introduction Session - Learn With Rushikesh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .brand-logo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+        }
+        
+        .free-badge {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin: 20px 0;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(76,175,80,0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .teacher-profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+        }
+        
+        .teacher-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #667eea;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+        }
+        
+        .teacher-info { text-align: left; }
+        .teacher-info h3 { color: #667eea; font-size: 1.8em; font-weight: 700; margin-bottom: 5px; }
+        .teacher-info p { color: #764ba2; font-size: 1.1em; font-weight: 600; }
+        
+        h1 { color: #667eea; font-size: 2.5em; font-weight: 800; margin-bottom: 15px; }
+        h2 { color: #764ba2; font-size: 2em; margin: 30px 0 20px; font-weight: 700; }
+        
+        .session-info {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .session-info h3 { color: #856404; font-size: 1.5em; margin-bottom: 15px; }
+        .session-info p { color: #664d03; font-size: 1.2em; line-height: 1.8; margin-bottom: 10px; }
+        .session-info .highlight { font-weight: 700; color: #e67e22; font-size: 1.3em; }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+        }
+        
+        .benefit-icon { font-size: 2.5em; margin-bottom: 10px; }
+        .benefit-title { color: #764ba2; font-size: 1.2em; font-weight: 700; margin-bottom: 8px; }
+        .benefit-desc { color: #555; font-size: 0.95em; line-height: 1.6; }
+        
+        .register-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            padding: 25px 60px;
+            border-radius: 50px;
+            font-size: 1.8em;
+            font-weight: 800;
+            text-decoration: none;
+            margin: 30px 0;
+            box-shadow: 0 15px 40px rgba(76,175,80,0.5);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: blink 1.5s infinite;
+        }
+        
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(76,175,80,0.7);
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .countdown-box {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .countdown-box h3 { font-size: 2em; margin-bottom: 15px; }
+        .countdown-box p { font-size: 1.3em; line-height: 1.8; }
+        
+        .why-attend {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .why-attend h2 { color: white; margin-bottom: 20px; }
+        .why-attend ul { list-style: none; padding: 0; }
+        .why-attend li {
+            font-size: 1.2em;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .why-attend li:before { content: "✅ "; margin-right: 10px; font-size: 1.3em; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; }
+            h1 { font-size: 2em; }
+            .teacher-profile { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand-logo">🎯 Learn With Rushikesh</div>
+            <div class="free-badge">🎁 100% FREE SESSION 🎁</div>
+            
+            <h1>Science Crash Course<br>Introduction Session</h1>
+            <p style="font-size: 1.3em; color: #764ba2; font-weight: 600;">
+                Know Everything About the Course Before You Enroll!
+            </p>
+            
+            <div class="teacher-profile">
+                <img src="landing page image.png" alt="Rushikesh Sir" class="teacher-photo">
+                <div class="teacher-info">
+                    <h3>Rushikesh Sir</h3>
+                    <p>Science Educator | 8+ Years Experience</p>
+                    <p style="font-size: 0.9em; color: #666;">Expert in 10th Board Science</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="session-info">
+            <h3>📅 Session Details:</h3>
+            <p>📆 <strong>Date:</strong> <span class="highlight">Wednesday, 27th November 2025</span></p>
+            <p>🕐 <strong>Time:</strong> <span class="highlight">9:00 PM - 10:00 PM (IST)</span></p>
+            <p>💻 <strong>Platform:</strong> <span class="highlight">Google Meet (Online)</span></p>
+            <p>⏱️ <strong>Duration:</strong> <span class="highlight">60 Minutes</span></p>
+            <p>💰 <strong>Fee:</strong> <span class="highlight">ABSOLUTELY FREE!</span></p>
+            <p>📱 <strong>WhatsApp Group:</strong> <span class="highlight">Join after registration for updates & reminders</span></p>
+        </div>
+        
+        <div class="countdown-box">
+            <h3>⏰ Limited Seats Available!</h3>
+            <p>Only 100 students can join this FREE session<br>
+            First Come, First Served!<br>
+            <strong>Register NOW to secure your spot!</strong></p>
+        </div>
+        
+        <h2 style="text-align: center;">🎓 What You'll Learn in This FREE Session:</h2>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📚</div>
+                <div class="benefit-title">Complete Course Overview</div>
+                <div class="benefit-desc">Detailed explanation of the 45-day crash course structure, topics covered, and study plan</div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <div class="benefit-title">Success Strategy</div>
+                <div class="benefit-desc">How to score 90+ in Science boards with smart preparation techniques</div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">📖</div>
+                <div class="benefit-title">Study Material Preview</div>
+                <div class="benefit-desc">See samples of our high-quality notes, tests, and resources</div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">💡</div>
+                <div class="benefit-title">FREE Science Tips</div>
+                <div class="benefit-desc">Get instant tricks to remember formulas and concepts easily</div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">❓</div>
+                <div class="benefit-title">Live Q&A Session</div>
+                <div class="benefit-desc">Ask any questions about the course, syllabus, or board preparation</div>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">🎁</div>
+                <div class="benefit-title">Special Bonus</div>
+                <div class="benefit-desc">Attendees get exclusive early bird discount on course enrollment!</div>
+            </div>
+        </div>
+        
+        <div class="why-attend">
+            <h2>🌟 Why Attend This Session?</h2>
+            <ul>
+                <li>Understand the complete 45-day course structure and benefits</li>
+                <li>See how systematic preparation can transform your Science scores</li>
+                <li>Get clarity on Evening/Night batch timings and schedule</li>
+                <li>Know exactly what study materials you'll receive</li>
+                <li>Learn about the 12 tests and continuous evaluation system</li>
+                <li>Understand how live doubt sessions work</li>
+                <li>See sample questions and our teaching methodology</li>
+                <li>Get your parent's questions answered directly by Rushikesh Sir</li>
+                <li>No obligation to enroll - purely informational!</li>
+                <li>Special discount code ONLY for session attendees!</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin: 50px 0;">
+            <h2 style="color: #667eea;">🚀 Ready to Join the FREE Session?</h2>
+            <p style="font-size: 1.3em; color: #666; margin: 20px 0;">
+                Register now and get instant access to:
+            </p>
+            
+            <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 15px; margin: 20px 0; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto;">
+                <p style="color: #555; font-size: 1.1em; line-height: 1.8;">
+                    ✅ Google Meet link via email<br>
+                    ✅ WhatsApp group for updates<br>
+                    ✅ FREE sample study notes<br>
+                    ✅ Reminder before session<br>
+                    ✅ Exclusive discount code
+                </p>
+            </div>
+            
+            <a href="registration.html" class="register-btn">
+                📝 REGISTER FOR FREE SESSION
+            </a>
+            
+            <p style="font-size: 1.1em; color: #666; margin-top: 20px;">
+                🔒 Safe & Secure | No Payment Required | No Spam
+            </p>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 30px; border-radius: 15px; margin-top: 40px;">
+            <h3 style="color: #667eea; font-size: 1.5em; margin-bottom: 15px; text-align: center;">
+                📞 Have Questions Before Registering?
+            </h3>
+            <div style="text-align: center; font-size: 1.1em; color: #555;">
+                <p style="margin: 10px 0;">📱 WhatsApp: <strong style="color: #667eea;">9011141618</strong></p>
+                <p style="margin: 10px 0;">📧 Email: <strong style="color: #667eea;">hrushi.thorave@gmail.com</strong></p>
+                <p style="margin: 10px 0;">📸 Instagram: <strong style="color: #667eea;">@learn_with_rushikesh</strong></p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
+            <p style="color: #999; font-size: 0.9em;">© 2025 Learn With Rushikesh | All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
