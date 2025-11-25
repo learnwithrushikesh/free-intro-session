@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for FREE Session - Learn With Rushikesh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header { text-align: center; margin-bottom: 40px; }
+        
+        .brand-logo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 800;
+        }
+        
+        .free-badge {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: 800;
+            margin: 15px 0;
+            display: inline-block;
+        }
+        
+        h1 { color: #667eea; font-size: 2em; font-weight: 800; margin-bottom: 10px; }
+        
+        .session-info {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .session-info p { color: #856404; font-size: 1em; margin: 8px 0; }
+        .session-info strong { color: #664d03; font-weight: 700; }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; color: #333; font-weight: 600; margin-bottom: 8px; font-size: 1em; }
+        .form-group label span { color: #ff6b6b; }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 30px rgba(76,175,80,0.4);
+        }
+        
+        .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(76,175,80,0.6); }
+        .submit-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+        
+        .error-msg { color: #ff6b6b; font-size: 0.9em; margin-top: 5px; display: none; }
+        
+        .success-msg {
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            display: none;
+        }
+        
+        .success-msg h2 { font-size: 2em; margin-bottom: 20px; }
+        .success-msg p { font-size: 1.2em; line-height: 1.8; margin-bottom: 15px; }
+        
+        .whatsapp-box {
+            background: #25D366;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+        }
+        
+        .whatsapp-box h3 { font-size: 1.6em; margin-bottom: 15px; }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: white;
+            color: #25D366;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: 800;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .whatsapp-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        
+        .notes-section {
+            background: rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .notes-section h3 { font-size: 1.5em; margin-bottom: 15px; }
+        
+        .notes-links { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px; justify-content: center; }
+        
+        .notes-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .notes-link:hover { background: rgba(255,255,255,0.5); transform: translateY(-2px); }
+        
+        .loading { text-align: center; padding: 20px; display: none; }
+        
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .important-note {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .important-note p { font-size: 1.1em; font-weight: 600; line-height: 1.6; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px 20px; }
+            .notes-links { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand-logo">🎯 Learn With Rushikesh</div>
+            <div class="free-badge">🎁 FREE SESSION</div>
+            
+            <h1>Register for Introduction Session</h1>
+            <p style="color: #764ba2; font-size: 1.1em; font-weight: 600;">
+                Fill the form to get instant access!
+            </p>
+        </div>
+        
+        <div class="session-info">
+            <p>📅 <strong>Date:</strong> Wednesday, 27th November 2025</p>
+            <p>🕐 <strong>Time:</strong> 9:00 PM - 10:00 PM (IST)</p>
+            <p>💻 <strong>Platform:</strong> Google Meet</p>
+            <p>⏱️ <strong>Duration:</strong> 60 Minutes</p>
+            <p>💰 <strong>Fee:</strong> 100% FREE - No Payment!</p>
+        </div>
+        
+        <div class="success-msg" id="successMsg">
+            <h2>🎉 Registration Successful!</h2>
+            <p>✅ You're confirmed for the FREE Introduction Session!</p>
+            <p>✅ Confirmation email sent to your inbox</p>
+            
+            <div class="important-note">
+                <p>⚠️ <strong>IMPORTANT - JOIN WhatsApp Group NOW!</strong><br>
+                Google Meet link will be shared in the WhatsApp group<br>
+                You MUST join the group to get session access!</p>
+            </div>
+            
+            <div class="whatsapp-box">
+                <h3>📱 Step 1: Join WhatsApp Group (MANDATORY)</h3>
+                <p style="font-size: 1.2em; margin-bottom: 15px; font-weight: 600;">
+                    Click below to join our WhatsApp group instantly!<br>
+                    <span style="font-size: 1em; font-weight: 500;">Google Meet link will be shared in this group</span>
+                </p>
+                <a href="https://chat.whatsapp.com/I4Gp8rL5Q5M5uvAvCMcPxj" 
+                   target="_blank" 
+                   class="whatsapp-btn">
+                    💬 JOIN WHATSAPP GROUP NOW
+                </a>
+                <p style="font-size: 1em; margin-top: 15px; font-weight: 600;">
+                    ⚡ The Google Meet link for 27th Nov session will be posted in this group!<br>
+                    📢 Updates, reminders, and all communication happens here
+                </p>
+            </div>
+            
+            <div class="notes-section">
+                <h3>📚 Step 2: Check Our FREE Sample Study Material</h3>
+                <p style="font-size: 1.1em; margin-bottom: 15px;">
+                    Preview our high-quality study notes before the session:
+                </p>
+                <div class="notes-links">
+                    <a href="https://learnwithrushikesh.github.io/science-crash-course-2025/chapt%202-Long%20Main%20Notes.html" 
+                       target="_blank" 
+                       class="notes-link">
+                        📖 Long Notes (Chapter 2)
+                    </a>
+                    <a href="https://learnwithrushikesh.github.io/science-crash-course-2025/Chapt%202-%20Quick%20revision%20notes.html" 
+                       target="_blank" 
+                       class="notes-link">
+                        ⚡ Quick Revision Notes (Chapter 2)
+                    </a>
+                </div>
+                <p style="font-size: 1em; margin-top: 15px;">
+                    📌 Review these notes to see the quality of our teaching materials!
+                </p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 10px; margin-top: 25px;">
+                <p style="font-size: 1.2em; font-weight: 700; margin-bottom: 15px;"><strong>📅 Session Details:</strong></p>
+                <p style="margin: 8px 0; font-size: 1.1em;">📆 Wednesday, 27th November 2025</p>
+                <p style="margin: 8px 0; font-size: 1.1em;">🕐 9:00 PM - 10:00 PM (IST)</p>
+                <p style="margin: 8px 0; font-size: 1.1em;">💻 Google Meet</p>
+                <p style="margin: 15px 0 0 0; font-size: 1em; font-weight: 600;">
+                    📱 Google Meet link will be shared in WhatsApp group on session day!
+                </p>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 1.1em;">
+                📞 Questions? Contact us on WhatsApp: <strong>9011141618</strong><br>
+                📧 Email: <strong>hrushi.thorave@gmail.com</strong>
+            </p>
+        </div>
+        
+        <div class="loading" id="loadingDiv">
+            <div class="loading-spinner"></div>
+            <p>Submitting your registration...</p>
+        </div>
+        
+        <form id="registrationForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name <span>*</span></label>
+                    <input type="text" id="firstName" placeholder="Enter first name" required>
+                    <div class="error-msg" id="firstNameError">Please enter first name</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Last Name <span>*</span></label>
+                    <input type="text" id="lastName" placeholder="Enter last name" required>
+                    <div class="error-msg" id="lastNameError">Please enter last name</div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Mobile Number (WhatsApp) <span>*</span></label>
+                    <input type="tel" id="mobile" placeholder="10-digit WhatsApp number" pattern="[0-9]{10}" required>
+                    <div class="error-msg" id="mobileError">Please enter valid 10-digit number</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address <span>*</span></label>
+                    <input type="email" id="email" placeholder="your.email@example.com" required>
+                    <div class="error-msg" id="emailError">Please enter valid email</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>School Name <span>*</span></label>
+                <input type="text" id="schoolName" placeholder="Enter your school name" required>
+                <div class="error-msg" id="schoolError">Please enter school name</div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>City <span>*</span></label>
+                    <input type="text" id="city" placeholder="Enter city" required>
+                    <div class="error-msg" id="cityError">Please enter city</div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Current Class <span>*</span></label>
+                    <select id="currentClass" required>
+                        <option value="">-- Select Class --</option>
+                        <option value="10th">10th Standard</option>
+                        <option value="9th">9th Standard</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="error-msg" id="classError">Please select class</div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">
+                📝 REGISTER FOR FREE SESSION
+            </button>
+            
+            <p style="text-align: center; color: #666; font-size: 0.9em; margin-top: 15px;">
+                🔒 Your information is safe | No payment required
+            </p>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const loadingDiv = document.getElementById('loadingDiv');
+        const successMsg = document.getElementById('successMsg');
+        
+        const WHATSAPP_GROUP = "https://chat.whatsapp.com/I4Gp8rL5Q5M5uvAvCMcPxj";
+        
+        function validateForm() {
+            let isValid = true;
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            if (firstName === '') {
+                document.getElementById('firstNameError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('firstNameError').style.display = 'none';
+            }
+            
+            const lastName = document.getElementById('lastName').value.trim();
+            if (lastName === '') {
+                document.getElementById('lastNameError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('lastNameError').style.display = 'none';
+            }
+            
+            const mobile = document.getElementById('mobile').value.trim();
+            const mobileRegex = /^[0-9]{10}$/;
+            if (!mobileRegex.test(mobile)) {
+                document.getElementById('mobileError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('mobileError').style.display = 'none';
+            }
+            
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+            
+            const schoolName = document.getElementById('schoolName').value.trim();
+            if (schoolName === '') {
+                document.getElementById('schoolError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('schoolError').style.display = 'none';
+            }
+            
+            const city = document.getElementById('city').value.trim();
+            if (city === '') {
+                document.getElementById('cityError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('cityError').style.display = 'none';
+            }
+            
+            const currentClass = document.getElementById('currentClass').value;
+            if (currentClass === '') {
+                document.getElementById('classError').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('classError').style.display = 'none';
+            }
+            
+            return isValid;
+        }
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!validateForm()) {
+                return;
+            }
+            
+            const fullName = document.getElementById('firstName').value.trim() + ' ' + 
+                           document.getElementById('lastName').value.trim();
+            
+            const registrationData = {
+                firstName: document.getElementById('firstName').value.trim(),
+                lastName: document.getElementById('lastName').value.trim(),
+                fullName: fullName,
+                mobile: document.getElementById('mobile').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                schoolName: document.getElementById('schoolName').value.trim(),
+                city: document.getElementById('city').value.trim(),
+                currentClass: document.getElementById('currentClass').value,
+                sessionDate: 'Wednesday, 27th November 2025',
+                sessionTime: '9:00 PM - 10:00 PM (IST)',
+                whatsappGroup: WHATSAPP_GROUP,
+                timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+            };
+            
+            submitRegistration(registrationData);
+        });
+        
+        function submitRegistration(data) {
+            loadingDiv.style.display = 'block';
+            form.style.display = 'none';
+            submitBtn.disabled = true;
+            
+            // REPLACE with your Google Apps Script URL for intro session
+            const scriptURL = 'YOUR_APPS_SCRIPT_URL_HERE';
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                loadingDiv.style.display = 'none';
+                successMsg.style.display = 'block';
+                console.log('Registration successful!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                loadingDiv.style.display = 'none';
+                successMsg.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>
